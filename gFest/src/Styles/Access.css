@@ -38,6 +38,7 @@
 @media screen and (min-width: 768px) and (max-width: 1025px) {
   .access .main-access form {
     width: 80%;
+    height: auto;
   }
 }
 
@@ -49,8 +50,6 @@
 
   .access .main-access {
     height: auto;
-    padding: 150px 30px 30px 30px;
+    padding: 50px 30px 30px 30px;
   }
 }
-
-

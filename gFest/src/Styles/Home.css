@@ -3,7 +3,7 @@
   align-items: center;
   justify-content: space-between;
   width: 100%;
-  padding: 50px;
+  padding: 20px 50px 50px;
 }
 
 .home .main-section .prt-a {
@@ -54,8 +54,11 @@
 }
 
 .home .main-section .prt-b {
+ 
   width: 50%;
 }
+
+
 
 
 @media screen and (min-width: 768px) and (max-width: 1025px) {
@@ -73,9 +76,9 @@
 
 @media (max-width: 767px) {
   .home .main-section {
-    flex-direction: column;
-    padding: 40px 30px 50px 30px;
-    gap: 30px;
+    flex-direction: column-reverse;
+    padding: 10px 30px 50px 30px;
+    gap: 50px;
     height: auto;
   }
 

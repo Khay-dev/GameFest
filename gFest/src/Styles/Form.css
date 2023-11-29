@@ -1,22 +1,18 @@
 .form .hero {
   height: 50vh;
-  background-image: linear-gradient(rgba(33, 10, 77, 0.75), rgba(33, 10, 77, 0.75)), url(../Imgs/flier.jpg);
+  background-image: linear-gradient(rgba(33, 10, 77, 0.75), rgba(33, 10, 77, 0.75)), url(../Imgs/flier2.jpg);
   background-repeat: no-repeat;
   background-position: center;
   background-size: auto;
   padding: 20px;
   position: relative;
-color: #210a4d;
+  color: #210a4d;
 }
 
 .form .section-a-main {
   width: 100%;
   padding: 100px 50px 50px;
 }
-
-/* .form .section-a-main .prt-a {
-  height: 40%;
-} */
 
 .form .section-a-main .prt-b {
   display: flex;
@@ -129,6 +125,11 @@ color: #210a4d;
 }
 
 @media (max-width:767px) {
+
+  .form .hero {
+    background-size: contain;
+  }
+
   .form .section-a-main {
     padding: 70px 30px;
 
