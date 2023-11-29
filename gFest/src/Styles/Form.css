@@ -1,12 +1,12 @@
 .form .hero {
   height: 50vh;
-  background-image: linear-gradient(rgba(0, 0, 0, 0.55), rgba(0, 0, 0, 0.55)), url(../Imgs/login.jpg);
+  background-image: linear-gradient(rgba(33, 10, 77, 0.75), rgba(33, 10, 77, 0.75)), url(../Imgs/flier.jpg);
   background-repeat: no-repeat;
   background-position: center;
-  background-size: cover;
+  background-size: auto;
   padding: 20px;
   position: relative;
-
+color: #210a4d;
 }
 
 .form .section-a-main {
@@ -54,10 +54,13 @@
   gap: 10px;
   font-size: 20px;
   font-weight: bolder;
+  color: #d87817;
 }
 
-.form .section-a-main .prt-b .a h2 {
+.form .section-a-main .prt-b .a h2,
+.form .section-a-main .prt-b .b form h2 {
   font-size: 25px;
+  color: #d87817;
 }
 
 

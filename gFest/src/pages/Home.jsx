@@ -1,6 +1,6 @@
 import Nav from "../components/Nav";
 import Footer from "../components/Footer";
-import Image1 from "../Imgs/login.jpg";
+import Image1 from "../Imgs/flier.jpg";
 import "../Styles/Home.css";
 import { Link } from "react-router-dom";
 import { FiArrowUpRight } from "react-icons/fi";

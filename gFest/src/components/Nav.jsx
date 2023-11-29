@@ -6,7 +6,7 @@ const Nav = () => {
         <nav>
             <div className="nav-holder-1">
                 <Link to="/" className="logo">
-                    <div className="logo"> G A M E S F E S T </div>
+                  
                 </Link>
             </div>
         </nav>
@@ -14,3 +14,5 @@ const Nav = () => {
 };
 
 export default Nav;
+
+

@@ -3,8 +3,7 @@
   align-items: center;
   justify-content: space-between;
   width: 100%;
-  padding: 120px 50px 50px 50px;
-  height: 100vh;
+  padding: 50px;
 }
 
 .home .main-section .prt-a {
@@ -15,8 +14,11 @@
 }
 
 .home .main-section .prt-a h2 {
-  font-size: 2.6rem
+  font-size: 2.6rem;
+  color: #d87817;
+  font-weight: 900;
 }
+
 
 .home .main-section .prt-a p {
   font-size: 16px;
@@ -28,7 +30,7 @@
   justify-content: center;
   align-items: center;
   gap: 10px;
-  border: 1px solid #000;
+  border: 1px solid #d87817;
   border-radius: 20px;
   padding: 10px 20px;
   width: 30%;
@@ -40,7 +42,7 @@
 }
 
 .home .main-section .prt-a .btn:hover {
-  background-color: #000;
+  background-color: #d87817;
   color: #fff;
   transition: 300ms ease-in-out;
 }
@@ -72,7 +74,7 @@
 @media (max-width: 767px) {
   .home .main-section {
     flex-direction: column;
-    padding: 140px 30px 50px 30px;
+    padding: 40px 30px 50px 30px;
     gap: 30px;
     height: auto;
   }

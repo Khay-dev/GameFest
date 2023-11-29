@@ -45,12 +45,12 @@ select {
 .btn-13 {
   color: #fff;
   z-index: 1;
-  background-color: #000;
+  background-color: #d87817;
 }
 
 .btn-3 {
   color: #fff;
-  border: 1px solid #000;
+  border: 1px solid #d87817;
 }
 
 .btn-13:after {
@@ -66,7 +66,7 @@ select {
 }
 
 .btn-13:hover {
-  color: #000;
+  color: #d87817;
 }
 
 .btn-13:hover:after {

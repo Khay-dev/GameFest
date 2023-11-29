@@ -17,6 +17,7 @@
 
 .access .main-access form h2 {
   font-size: 40px;
+  color: #d87817;
 }
 
 .access .main-access form input {
@@ -52,6 +53,4 @@
   }
 }
 
-* {
-  border: 1px solid red;
-}
+

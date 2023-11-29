@@ -13,13 +13,13 @@ import axios from "axios";
 
 const Form = () => {
   const [formData, setFormData] = useState({
-    name: "",
+    fullName: "",
     email: "",
-    number: "",
+    phoneNo: "",
   });
   const [loading, setLoading] = useState(false);
   const [success, setSuccess] = useState(false);
-  const [error, setError] = useState(false);
+  const [error, setError] = useState(null);
 
   const handleInputChange = (e) => {
     setFormData({
@@ -34,7 +34,7 @@ const Form = () => {
 
     try {
       await axios.post(
-        "https://event-register.onrender.com/register",
+        "https://events-register.onrender.com/api/v1/register",
         formData
       );
 
@@ -98,9 +98,9 @@ const Form = () => {
               <h2>RSVP TO EVENT</h2>
               <input
                 type="name"
-                name="name"
+                name="fullName"
                 placeholder="*Fullname"
-                value={formData.name}
+                value={formData.fullName}
                 onChange={handleInputChange}
                 required
               />
@@ -114,9 +114,9 @@ const Form = () => {
               />
               <input
                 type="text"
-                name="number"
+                name="phoneNo"
                 placeholder="*Phone number "
-                value={formData.number}
+                value={formData.phoneNo}
                 onChange={handleInputChange}
                 required
               />
@@ -131,7 +131,7 @@ const Form = () => {
             {success && <p className="success">Data submitted successfully!</p>}
             {error && (
               <p className="error">
-                {"Internal Server Error-- Please Try Again!"}
+                {"An error occurred while saving data. Please try again."}
               </p>
             )}
           </div>
