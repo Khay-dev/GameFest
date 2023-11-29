@@ -1,0 +1,144 @@
+.form .hero {
+  height: 50vh;
+  background-image: linear-gradient(rgba(0, 0, 0, 0.55), rgba(0, 0, 0, 0.55)), url(../Imgs/login.jpg);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  padding: 20px;
+  position: relative;
+
+}
+
+.form .section-a-main {
+  width: 100%;
+  padding: 100px 50px 50px;
+}
+
+/* .form .section-a-main .prt-a {
+  height: 40%;
+} */
+
+.form .section-a-main .prt-b {
+  display: flex;
+  width: 100%;
+  align-items: start;
+  justify-content: center;
+}
+
+.form .section-a-main .prt-b .a {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  justify-content: center;
+  align-items: start;
+  width: 40%;
+  margin-left: 60px;
+}
+
+.form .section-a-main .prt-b .a .time,
+.form .section-a-main .prt-b .a .location,
+.form .section-a-main .prt-b .a .expect {
+  display: flex;
+  gap: 30px;
+  align-items: start;
+}
+
+.form .section-a-main .prt-b .a p {
+  font-size: 16px;
+  line-height: 1.75;
+}
+
+.form .section-a-main .prt-b .a .label {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-size: 20px;
+  font-weight: bolder;
+}
+
+.form .section-a-main .prt-b .a h2 {
+  font-size: 25px;
+}
+
+
+.form .section-a-main .prt-b .a li {
+  list-style: none;
+}
+
+.form .section-a-main .prt-b .b {
+  width: 40%;
+}
+
+.form .section-a-main .prt-b .b form {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.form .section-a-main .prt-b .b form input {
+  width: 100%;
+  background: #f1f4f1;
+  padding: 20px 20px 20px 30px;
+  border: none;
+}
+
+.form .section-a-main .prt-b .b form button {
+  width: 50%;
+  padding: 10px 30px;
+  outline: none;
+  border: none;
+}
+
+.error {
+  color: red;
+  align-items: center;
+  font-weight: bold;
+  margin-top: 20px;
+}
+
+.success {
+  color: green;
+  align-items: center;
+  font-weight: bold;
+  margin-top: 20px;
+}
+
+
+
+
+
+
+@media screen and (min-width: 768px) and (max-width: 1025px) {
+
+  .form .section-a-main .prt-b .a .time,
+  .form .section-a-main .prt-b .a .location,
+  .form .section-a-main .prt-b .a .expect {
+    gap: 20px;
+  }
+
+  .form .section-a-main .prt-b .a {
+    margin-left: 0px;
+  }
+
+  .form .section-a-main .prt-b {
+    justify-content: space-around;
+  }
+}
+
+@media (max-width:767px) {
+  .form .section-a-main {
+    padding: 70px 30px;
+
+  }
+
+  .form .section-a-main .prt-b {
+    flex-direction: column-reverse;
+    gap: 60px;
+  }
+
+  .form .section-a-main .prt-b .a,
+  .form .section-a-main .prt-b .b {
+    width: 100%;
+    margin: 0px;
+  }
+}

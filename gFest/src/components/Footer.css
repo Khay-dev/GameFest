@@ -1,0 +1,33 @@
+.footer footer {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 50px;
+  color: #fff;
+  background-color: #21094c;
+
+}
+
+.footer footer .copy {
+  font-size: 18px;
+}
+
+.footer footer .socials {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-size: 25px;
+}
+
+@media (max-width: 767px) {
+  .footer footer {
+    flex-direction: column;
+    gap: 30px;
+  }
+
+  .footer footer .copy {
+    text-align: center;
+    font-size: 14px;
+    line-height: 1.66;
+  }
+}

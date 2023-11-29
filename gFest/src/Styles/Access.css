@@ -1,0 +1,57 @@
+.access .main-access {
+  height: 100vh;
+  display: grid;
+  place-items: center;
+  padding: 50px 30px;
+}
+
+
+
+.access .main-access form {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  align-items: center;
+  width: 50%;
+}
+
+.access .main-access form h2 {
+  font-size: 40px;
+}
+
+.access .main-access form input {
+  width: 100%;
+  background: #f1f4f1;
+  padding: 20px 20px 20px 30px;
+  border: none;
+}
+
+.access .main-access form button {
+  width: 50%;
+  padding: 10px 30px;
+  outline: none;
+  border: none;
+}
+
+
+@media screen and (min-width: 768px) and (max-width: 1025px) {
+  .access .main-access form {
+    width: 80%;
+  }
+}
+
+
+@media (max-width:767px) {
+  .access .main-access form {
+    width: 100%;
+  }
+
+  .access .main-access {
+    height: auto;
+    padding: 150px 30px 30px 30px;
+  }
+}
+
+* {
+  border: 1px solid red;
+}

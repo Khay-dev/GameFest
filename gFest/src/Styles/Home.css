@@ -1,0 +1,97 @@
+.home .main-section {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+  padding: 120px 50px 50px 50px;
+  height: 100vh;
+}
+
+.home .main-section .prt-a {
+  width: 45%;
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.home .main-section .prt-a h2 {
+  font-size: 2.6rem
+}
+
+.home .main-section .prt-a p {
+  font-size: 16px;
+  line-height: 1.45;
+}
+
+.home .main-section .prt-a .btn {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  border: 1px solid #000;
+  border-radius: 20px;
+  padding: 10px 20px;
+  width: 30%;
+}
+
+.home .main-section .prt-a .btn .icon {
+  font-weight: bold;
+  color: #000;
+}
+
+.home .main-section .prt-a .btn:hover {
+  background-color: #000;
+  color: #fff;
+  transition: 300ms ease-in-out;
+}
+
+.home .main-section .prt-a .btn:hover .icon {
+  color: #fff;
+  transform: rotate(45deg);
+  transition: all 400ms ease-in-out;
+}
+
+.home .main-section .prt-b {
+  width: 50%;
+}
+
+
+@media screen and (min-width: 768px) and (max-width: 1025px) {
+
+  .home .main-section {
+    padding: 100px 30px 50px 30px;
+    height: auto;
+  }
+
+  .home .main-section .prt-a h2 {
+    font-size: 2.2rem;
+  }
+
+}
+
+@media (max-width: 767px) {
+  .home .main-section {
+    flex-direction: column;
+    padding: 140px 30px 50px 30px;
+    gap: 30px;
+    height: auto;
+  }
+
+  .home .main-section .prt-a,
+  .home .main-section .prt-b {
+    width: 100%;
+  }
+
+  .home .main-section .prt-a {
+    align-items: center;
+    text-align: center;
+  }
+
+  .home .main-section .prt-a h2 {
+    font-size: 1.762rem
+  }
+
+  .home .main-section .prt-a .btn {
+    width: 50%;
+  }
+}
