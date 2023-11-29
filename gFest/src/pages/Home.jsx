@@ -4,9 +4,14 @@ import Image1 from "../Imgs/flier2.jpg";
 import "../Styles/Home.css";
 import { Link } from "react-router-dom";
 import { FiArrowUpRight } from "react-icons/fi";
+import { Helmet } from "react-helmet";
 const Home = () => {
   return (
     <div className="home">
+      <Helmet>
+        <meta charSet="utf-8" />
+        <title> Games Fest</title>
+      </Helmet>
       <Nav />
       <div className="main-section">
         <div className="prt-a">

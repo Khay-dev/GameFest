@@ -11,6 +11,8 @@ import { IoGameControllerOutline } from "react-icons/io5";
 
 import axios from "axios";
 
+import { Helmet } from "react-helmet";
+
 const Form = () => {
   const [formData, setFormData] = useState({
     fullName: "",
@@ -50,6 +52,10 @@ const Form = () => {
   };
   return (
     <div className="form">
+      <Helmet>
+        <meta charSet="utf-8" />
+        <title>RSVP</title>
+      </Helmet>
       <div className="hero">
         <Nav />
       </div>
