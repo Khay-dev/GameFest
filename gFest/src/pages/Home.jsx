@@ -24,7 +24,7 @@ const Home = () => {
             promises an atmosphere charged with excitement, laughter, and the
             shared passion for gaming
           </p>
-          <Link to="/form" className="btn">
+          <Link to="/Form" className="btn">
             <p>RSVP</p>
             <FiArrowUpRight className="icon" />
           </Link>
