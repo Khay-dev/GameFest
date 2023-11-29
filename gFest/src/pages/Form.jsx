@@ -134,7 +134,12 @@ const Form = () => {
                 {loading ? "Loading..." : "Submit"}
               </button>
             </form>
-            {success && <p className="success">Data submitted successfully!</p>}
+            {success && (
+              <p className="success">
+                 Success!  Please check your
+                email for further details.
+              </p>
+            )}
             {error && (
               <p className="error">
                 {"An error occurred while saving data. Please try again."}
