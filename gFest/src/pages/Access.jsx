@@ -1,12 +1,16 @@
 import Nav from "../components/Nav";
 import { useState } from "react";
-// import axios from "axios";
+import axios from "axios";
+import { useNavigate } from "react-router-dom";
 import "../Styles/Access.css";
+
 const Access = () => {
   const [formData, setFormData] = useState({
     email: "",
     login: "",
   });
+  const [error, setError] = useState(null);
+  const [loading, setLoading] = useState(false);
 
   const handleSubmit = (e) => {
     setFormData({
@@ -14,28 +18,37 @@ const Access = () => {
       [e.target.name]: e.target.value,
     });
   };
+  const navigate = useNavigate();
 
   const handleLogin = async (e) => {
     e.preventDefault();
-    // try {
-    //   const response = await axios.post(
-    //     "https://your-api-endpoint.com/login",
-    //     formData
-    //   );
+    setLoading(true);
 
-    //   const { token } = response.data;
+    try {
+      const response = await axios.post(
+        "https://events-register.onrender.com/api/v1/admin/login",
+        formData
+      );
 
-    //   // Save the token to local storage or wherever you prefer
-    //   localStorage.setItem("jwtToken", token);
+      const { token } = response.data;
 
-    //   // Redirect or perform other actions after successful login
-    // } catch (error) {
-    //   console.error(
-    //     "Login failed:",
-    //     error.response ? error.response.data : error.message
-    //   );
-    //   // Handle login error
-    // }
+      // Save the token to local storage or wherever you prefer
+      localStorage.setItem("jwtToken", token);
+
+      // Redirect or perform other actions after successful login
+      navigate("/Admin");
+    } catch (error) {
+      console.error(
+        setError(
+          "Login failed:",
+          error.response ? error.response.data : error.message
+        )
+      );
+      // Handle login error
+    } finally {
+      setLoading(false);
+    }
+
     console.log({ formData });
   };
   return (
@@ -60,10 +73,15 @@ const Access = () => {
             placeholder="*Access Code"
             required
           />
-          <button className="custom-btn btn-13 btn-3" type="submit">
-            Login
+          <button
+            className="custom-btn btn-13 btn-3"
+            type="submit"
+            disabled={loading}
+          >
+            {loading ? "Loading..." : "Login"}
           </button>
         </form>
+        {error && <p className="error">{error}</p>}
       </div>
     </div>
   );

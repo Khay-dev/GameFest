@@ -8,23 +8,53 @@ import "../Styles/Admin.css";
 const Admin = () => {
   const [error, setError] = useState(null);
   const [data, setData] = useState({});
+  const [user, setUser] = useState("");
+  const [code, setCode] = useState("");
+
+  const handleU = (e) => {
+    setCode(e.target.value);
+  };
 
   async function handler() {
     try {
+      const token = localStorage.getItem("jwtToken");
       const res = await axios.get(
-        "https://events-register.onrender.com/api/v1/admin/stats"
+        "https://events-register.onrender.com/api/v1/admin/stats",
+        {
+          headers: {
+            Authorization: `Bearer ${token}`,
+          },
+        }
       );
-
       if (res.status !== 200) {
         setError(`Request failed with status: ${res.status}`);
       } else {
-        setData(res.data);
-        console.log(data);
+        setData(res.data.stats);
+        console.log(res.data.stats);
       }
     } catch (err) {
       setError(err.message);
     }
   }
+
+  const handleR = async (e) => {
+    e.preventDefault();
+    try {
+      const token = localStorage.getItem("jwtToken");
+      const res = await axios
+        .get(
+        `https://events-register.onrender.com/api/v1/admin?code=${code}`,
+        {
+          headers: {
+            Authorization: `Bearer ${token}`,
+          },
+        }
+      );
+      setUser(res.user.user);
+    } catch (err) {
+      setError(err.message);
+    }
+  };
 
   useEffect(() => {
     handler();
@@ -51,21 +81,29 @@ const Admin = () => {
           </div>
         </div>
         <div className="prt-b">
-          <form>
-            <input type="text" placeholder="*Enter Access Code" required />
+          <form onSubmit={handleR}>
+            <input
+              type="text"
+              placeholder="*Enter Access Code"
+              name="code"
+              value={code}
+              onChange={handleU}
+              required
+            />
             <button type="submit">Search</button>
           </form>
 
-          <div className="user">
-            <p>{`Name: Kalu Daniel Obinna`}</p>
-            <p>{`Email: krayzhee419@gmail.com`}</p>
-            <p>{`Phone Number: 08153270969`}</p>
-
-            <button type="submit" className="custom-btn btn-13 btn-3">
-              Confirm
-            </button>
-            {error && <p className="error">{error}</p>}
-          </div>
+          {user && (
+            <div className="user">
+              <p>{`Name: ${user.fullName}`}</p>
+              <p>{`Email: ${user.email}`}</p>
+              <p>{`Phone Number: ${user.phoneNo}`}</p>
+              <button type="submit" className="custom-btn btn-13 btn-3">
+                Confirm
+              </button>
+            </div>
+          )}
+          {error && <p className="error">{error}</p>}
         </div>
       </div>
     </div>

@@ -40,7 +40,7 @@
 }
 
 .form .section-a-main .prt-b .a p {
-  font-size: 16px;
+  font-size: 14px;
   line-height: 1.75;
 }
 
@@ -93,6 +93,7 @@
   align-items: center;
   font-weight: bold;
   margin-top: 20px;
+  font-size: 14px;
 }
 
 .success {
@@ -100,6 +101,7 @@
   align-items: center;
   font-weight: bold;
   margin-top: 20px;
+  font-size: 14px;
 }
 
 

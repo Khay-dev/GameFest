@@ -14,11 +14,13 @@ import axios from "axios";
 import { Helmet } from "react-helmet";
 
 const Form = () => {
-  const [formData, setFormData] = useState({
+  const initialFormData = {
     fullName: "",
     email: "",
     phoneNo: "",
-  });
+  };
+
+  const [formData, setFormData] = useState(initialFormData);
   const [loading, setLoading] = useState(false);
   const [success, setSuccess] = useState(false);
   const [error, setError] = useState(null);
@@ -41,6 +43,7 @@ const Form = () => {
       );
 
       setSuccess(true);
+      setFormData(initialFormData);
     } catch (error) {
       setError("Error saving data:", error);
       console.log("Error saving data:", error);
@@ -48,7 +51,6 @@ const Form = () => {
       setLoading(false);
     }
     console.log({ formData });
-    e.target.reset();
   };
   return (
     <div className="form">
@@ -136,8 +138,7 @@ const Form = () => {
             </form>
             {success && (
               <p className="success">
-                 Success!  Please check your
-                email for further details.
+                Success! Please check your email for further details.
               </p>
             )}
             {error && (
@@ -145,6 +146,7 @@ const Form = () => {
                 {"An error occurred while saving data. Please try again."}
               </p>
             )}
+            <img src="" alt="" />
           </div>
         </div>
       </div>
