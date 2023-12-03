@@ -3,6 +3,7 @@
   align-items: flex-start;
   justify-content: center;
   width: 100%;
+  gap: 20px;
   padding: 40px;
 }
 
@@ -39,7 +40,7 @@
   color: #d87817;
 }
 
-.main-admin .prt-b {
+.prt-b {
   display: flex;
   flex-direction: column;
   gap: 80px;
@@ -50,31 +51,29 @@
 
 
 
-.main-admin .prt-b form {
+.prt-b form {
   display: flex;
   flex-direction: column;
   align-items: start;
   gap: 20px;
   width: 100%;
-
-
 }
 
-.main-admin .prt-b form input {
-  width: 90%;
+.prt-b form input {
   background: #f1f4f1;
   padding: 20px 20px 20px 30px;
   border: none;
+  width: 90%;
 }
 
-.main-admin .prt-b form button {
-  width: 50%;
+.prt-b form button {
   padding: 10px 30px;
   outline: none;
   border: none;
+  width: 50%;
 }
 
-.main-admin .prt-b .user {
+.prt-b .user {
   display: flex;
   align-items: start;
   gap: 20px;
@@ -84,7 +83,7 @@
 
 }
 
-.main-admin .prt-b .user p {
+.prt-b .user p {
   font-size: 25px;
   color: #d87817;
   font-weight: bold;
@@ -100,18 +99,18 @@
     gap: 50px;
   }
 
-  .main-admin .prt-b,
-  .main-admin .prt-b form input,
-  .main-admin .prt-b .user {
+  .prt-b,
+  .prt-b form input,
+  .prt-b .user {
     width: 100%;
     align-items: center;
   }
 
-  .main-admin .prt-b form {
+  .prt-b form {
     align-items: center;
   }
 
-  .main-admin .prt-b .user {
+  .prt-b .user {
     text-align: center;
   }
 
@@ -122,7 +121,7 @@
     align-items: center;
   }
 
-  .main-admin .prt-b .user p {
+  .prt-b .user p {
     font-size: 20px;
   }
 }

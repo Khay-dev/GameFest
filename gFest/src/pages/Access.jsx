@@ -36,6 +36,7 @@ const Access = () => {
       localStorage.setItem("jwtToken", token);
 
       // Redirect or perform other actions after successful login
+      setError(null);
       navigate("/Admin");
     } catch (error) {
       console.error(
