@@ -1,5 +1,4 @@
 .access .main-access {
-  height: 100vh;
   display: grid;
   place-items: center;
   padding: 50px 30px;

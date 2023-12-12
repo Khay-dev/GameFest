@@ -7,7 +7,8 @@ import "../Styles/Admin.css";
 import Ipt from "./Ipt";
 
 const Admin = () => {
-  const [data, setData] = useState({});
+  const [attendedCount, setAttendedCount] = useState(0);
+  const [rsvpCount, setRsvpCount] = useState(0);
 
   async function handler() {
     try {
@@ -20,7 +21,8 @@ const Admin = () => {
           },
         }
       );
-      setData(res.data.stats);
+      setAttendedCount(res.data.stats.numOfAttended);
+      setRsvpCount(res.data.stats.numOfRSVP);
       console.log(res.data.stats);
     } catch (err) {
       console.log(err.message);
@@ -40,14 +42,14 @@ const Admin = () => {
               <FaUserFriends />
               <p>No of RSVP:</p>
             </div>
-            <div className="reg-b">{data.numOfRSVP}</div>
+            <div className="reg-b">{rsvpCount}</div>
           </div>
           <div className="att">
             <div className="reg-a">
               <PiUsersFourFill />
               <p>Attendance:</p>
             </div>
-            <div className="reg-b">{data.numOfAttended}</div>
+            <div className="reg-b">{attendedCount}</div>
           </div>
         </div>
         <Ipt />

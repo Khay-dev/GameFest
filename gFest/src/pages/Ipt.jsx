@@ -8,7 +8,6 @@ const Ipt = () => {
   const handleR = async (e) => {
     e.preventDefault();
     setLoading(true);
-
     try {
       const token = localStorage.getItem("jwtToken");
       const res = await axios.get(
@@ -32,8 +31,15 @@ const Ipt = () => {
   const handleAttendClick = async () => {
     try {
       // Make a request to mark the user as attended
-      await axios.put(
-        `https://events-register.onrender.com/api/v1/admin?${code}`,
+      const token = localStorage.getItem("jwtToken");
+      await axios.patch(
+        `https://events-register.onrender.com/api/v1/admin`,
+        { code: code },
+        {
+          headers: {
+            Authorization: `Bearer ${token}`,
+          },
+        }
       );
       // Clear the displayed data
       setData(null);
@@ -64,6 +70,8 @@ const Ipt = () => {
           <p>{`Name: ${data.fullName}`}</p>
           <p>{`Email: ${data.email}`}</p>
           <p>{`Phone Number: ${data.phoneNo}`}</p>
+          <p>{`RSVP Code: ${data.rsvp}`}</p>
+          <p>{`Attended: ${data.attended}`}</p>
           <button
             onClick={handleAttendClick}
             className="custom-btn btn-13 btn-3"
