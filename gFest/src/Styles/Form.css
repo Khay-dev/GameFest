@@ -70,10 +70,14 @@
 }
 
 .form .section-a-main .prt-bb .b h2 {
-  font-size: 27px;
+  font-size: 25px;
   font-weight: 900;
   line-height: 1.45;
   color: #d87817;
+}
+
+.form .section-a-main .prt-bb .b h2 a {
+  color: black;
 }
 
 .form .section-a-main .prt-bb .b form {
