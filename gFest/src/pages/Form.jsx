@@ -62,7 +62,7 @@ const Form = () => {
         <Nav />
       </div>
       <div className="section-a-main">
-        <div className="prt-b">
+        <div className="prt-bb">
           <div className="a">
             <h2>EVENT DETAILS</h2>
             <div className="time">
@@ -102,6 +102,11 @@ const Form = () => {
           </div>
 
           <div className="b">
+            <h2>
+              Free Access to TLHB GAMESFEST has concluded!! If you are still
+              eager to join us, Kindly note that a fee of #1000 will be
+              collected at the venue. <br /> Thank you and see you soon.
+            </h2>
             <form onSubmit={handleSubmit}>
               <h2>RSVP TO EVENT</h2>
               <input
@@ -146,7 +151,6 @@ const Form = () => {
                 {"An error occurred while saving data. Please try again."}
               </p>
             )}
-            <img src="" alt="" />
           </div>
         </div>
       </div>

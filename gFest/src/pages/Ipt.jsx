@@ -51,6 +51,7 @@ const Ipt = () => {
   };
 
   return (
+    
     <div className="prt-b">
       <form onSubmit={handleR}>
         <input
