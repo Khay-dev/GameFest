@@ -103,18 +103,6 @@ const Form = () => {
           </div>
 
           <div className="b">
-            <h2>
-              Hey there, brief update! <br /> The Free RSVP is now closed, but your
-              presence is still required. To be part of this gaming extravaganza click this " 
-              <a
-                target="blank"
-                href="https://www.instagram.com/_thelasthairbender/?utm_source=ig_web_button_share_sheet&igshid=YzAwZjE1ZTI0Zg=="
-              >
-                Link 
-              </a>
-              " to our instagram account to get information. <br />
-              Thank You and see you there!!
-            </h2>
             <form onSubmit={handleSubmit}>
               <h2>RSVP TO EVENT</h2>
               <input

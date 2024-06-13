@@ -32,10 +32,10 @@ const Access = () => {
 
       const { token } = response.data;
 
-      // Save the token to local storage or wherever you prefer
+      // Saving the token to local storage 
       localStorage.setItem("jwtToken", token);
 
-      // Redirect or perform other actions after successful login
+      // doing other actions after login is success
       setError(null);
       navigate("/Admin");
     } catch (error) {

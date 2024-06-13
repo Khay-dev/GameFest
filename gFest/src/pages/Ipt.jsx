@@ -33,7 +33,7 @@ const Ipt = () => {
       // Make a request to mark the user as attended
       const token = localStorage.getItem("jwtToken");
       await axios.patch(
-        `https://events-register.onrender.com/api/v1/admin`,
+        "https://events-register.onrender.com/api/v1/admin",
         { code: code },
         {
           headers: {
@@ -74,6 +74,7 @@ const Ipt = () => {
           <p>{`RSVP Code: ${data.rsvp}`}</p>
           <p>{`Attended: ${data.attended}`}</p>
           <button
+          type="button"
             onClick={handleAttendClick}
             className="custom-btn btn-13 btn-3"
             disabled={loading}
